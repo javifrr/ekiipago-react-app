@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import './Home.css';
 
 
@@ -47,7 +49,7 @@ const Header: React.FC = () => {
                 <a href="#">Productos</a>
                 <ul className="sub-menu">
                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-317">
-                    <a href="https://ekiipago.com/boton-de-pago-ekiipago/">Botón de pago</a>
+                    <Link to="/boton-de-pago">Botón de pago</Link>
                   </li>
                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1248">
                     <a href="https://ekiipago.com/link-de-pago-movil/">Link de Pago Móvil</a>
@@ -64,7 +66,7 @@ const Header: React.FC = () => {
                 <a href="https://ekiipago.com/quienes-somos/">Quiénes somos</a>
               </li>
               <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-318">
-                <a href="https://ekiipago.com/blog-ekiipago/">Blog</a>
+                <Link to="/blog">Blog</Link>
               </li>
               <li className="de-menu-cta menu-item menu-item-type-post_type menu-item-object-page menu-item-117">
                 <a href="https://ekiipago.com/contacto/">Contactar</a>
@@ -237,6 +239,220 @@ const ProductsSection: React.FC = () => {
   );
 };
 
+const BeneficiosSection: React.FC = () => {
+  const beneficios = [
+    {
+      title: 'SEGURIDAD',
+      description: 'Implementamos continuamente los métodos más avanzados en manejo de información, garantizando que nuestras soluciones sean robustas y estables. Con esto aseguramos los datos transaccionales sin afectar la operación de tu empresa.',
+    },
+    {
+      title: 'RAPIDEZ',
+      description: 'Podrás hacer transacciones rápidas y manejar pagos en minutos.',
+    },
+    {
+      title: 'COMODIDAD',
+      description: 'Con nuestras soluciones tus clientes podrán realizar pagos al alcance de un clic sin necesidad de ir a comercios, bancos o instituciones.',
+    },
+    {
+      title: 'AL DÍA CON LAS REGULACIONES',
+      description: 'Contamos con todos los permisos legales para que puedas comenzar a operar tus transacciones con nosotros sin ningún tipo de preocupación.',
+    },
+  ];
+
+  return (
+    <div className="et_pb_section et_pb_section_3 et_section_regular">
+      <div className="et_pb_row et_pb_row_3">
+        <div className="et_pb_column et_pb_column_4_4 et_pb_column_9 et_pb_css_mix_blend_mode_passthrough et-last-child">
+          <div className="et_pb_module et_pb_text et_pb_text_7 et_pb_text_align_left et_pb_bg_layout_light">
+            <div className="et_pb_text_inner">
+              <h2>Beneficios de ekiipago</h2>
+              <p>En ekiipago, como proveedores de soluciones de pagos digitales, queremos ofrecerles a nuestros clientes la mayor confianza y soporte posible. Es por eso que al formar parte de nuestra red de aliados y clientes contarás con los siguientes beneficios:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="et_pb_row et_pb_row_4">
+        {beneficios.map((beneficio, index) => (
+          <div key={index} className="et_pb_column et_pb_column_1_4 et_pb_column_10 et_pb_css_mix_blend_mode_passthrough">
+            <div className="et_pb_module et_pb_text et_pb_text_8 et_pb_text_align_left et_pb_bg_layout_light">
+              <div className="et_pb_text_inner">
+                <h3>{beneficio.title}</h3>
+                <p>{beneficio.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const CasosExitoSection: React.FC = () => {
+  const testimonials = [
+    {
+      name: 'Rosa Ruíz',
+      title: 'Directora de producto y tecnología de HolaDOC',
+      text: '«El proceso con Ekiipago fue fluido. La información fue clara y recibimos un gran apoyo y asesoría del equipo, lo que hizo todo mucho más fácil. Recomiendo Ekiipago a cualquier empresa que busque soluciones de pago.»',
+      image: 'https://ekiipago.com/wp-content/uploads/2024/08/RosaRuizekii.png',
+    },
+    {
+      name: 'Carlos Castillo',
+      title: 'Coordinador de la Plataforma RUAP',
+      text: '“Para nosotros el botón de pago de ekiipago es el integrador perfecto entre nuestro sistema de contadores agremiados y el Banco, con un servicio 24×7”.',
+      image: 'https://ekiipago.com/wp-content/uploads/2023/04/foto-Carlos-Castillo-1-480x480.webp',
+    },
+  ];
+
+  return (
+    <div className="et_pb_section et_pb_section_4 et_section_regular">
+      <div className="et_pb_row et_pb_row_5">
+        <div className="et_pb_column et_pb_column_4_4 et_pb_column_14 et_pb_css_mix_blend_mode_passthrough et-last-child">
+          <div className="et_pb_module et_pb_text et_pb_text_12 et_pb_text_align_left et_pb_bg_layout_light">
+            <div className="et_pb_text_inner">
+              <h2>Casos de éxito de ekiipago</h2>
+              <p>Nada mejor que la experiencia de nuestros clientes y aliados para descubras y te decidas por todas las ventajas y beneficios que tendrá tu negocio al implementar nuestras soluciones de pagos digitales en él.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="et_pb_row et_pb_row_6">
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="et_pb_column et_pb_column_1_2 et_pb_column_15 et_pb_css_mix_blend_mode_passthrough">
+            <div className="et_pb_module et_pb_testimonial et_pb_testimonial_0 clearfix et_pb_text_align_left et_pb_bg_layout_light et_pb_icon_off">
+              <div className="et_pb_testimonial_portrait" style={{ backgroundImage: `url(${testimonial.image})` }}></div>
+              <div className="et_pb_testimonial_description">
+                <div className="et_pb_testimonial_description_inner">
+                  <p>{testimonial.text}</p>
+                  <strong className="et_pb_testimonial_author">{testimonial.name}</strong>
+                  <em className="et_pb_testimonial_meta">{testimonial.title}</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const BlogSection: React.FC = () => {
+  const blogPosts = [
+    {
+      title: 'Del efectivo al clic',
+      link: 'https://ekiipago.com/del-efectivo-al-clic/',
+    },
+    {
+      title: 'Más allá del producto: Cómo una experiencia de pago excepcional impulsa tus ventas',
+      link: 'https://ekiipago.com/mas-alla-del-producto-como-una-experiencia-de-pago-excepcional-impulsa-tus-ventas/',
+    },
+    {
+      title: '¿Tu negocio es rentable o solo popular?',
+      link: 'https://ekiipago.com/tu-negocio-es-rentable-o-solo-popular/',
+    },
+  ];
+
+  return (
+    <div className="et_pb_section et_pb_section_5 et_section_regular">
+      <div className="et_pb_row et_pb_row_7">
+        <div className="et_pb_column et_pb_column_4_4 et_pb_column_17 et_pb_css_mix_blend_mode_passthrough et-last-child">
+          <div className="et_pb_module et_pb_text et_pb_text_13 et_pb_text_align_left et_pb_bg_layout_light">
+            <div className="et_pb_text_inner">
+              <h2>Blog ekiipago</h2>
+              <p>El mundo de los pagos digitales, ya sea en un e-commerce, app móvil o página web de cobro de servicios está en constante evolución. Y aquí siempre estarás al tanto de las últimas noticias relacionadas con todo lo que tenga que ver con hacer y recibir pagos digitales.</p>
+            </div>
+          </div>
+          <div className="et_pb_module et_pb_blog_0 et_pb_posts_blog_grid_wrap">
+            <div className="et_pb_posts et_pb_blog_grid clearfix">
+              {blogPosts.map((post, index) => (
+                <article key={index} className="et_pb_post">
+                  <h2 className="entry-title"><a href={post.link}>{post.title}</a></h2>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div className="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module">
+            <a className="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="https://www.ekiipago.com/blog-ekiipago/">Ir a blog ekiipago</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AliadosClientesSection: React.FC = () => {
+  const aliados = [
+    'https://www.ekiipago.com/wp-content/uploads/2023/03/movistar.webp',
+    'https://www.ekiipago.com/wp-content/uploads/2023/03/movilway.webp',
+    'https://ekiipago.com/wp-content/uploads/2024/03/inter-1-03.png',
+    'https://www.ekiipago.com/wp-content/uploads/2023/03/digitel.webp',
+    'https://www.ekiipago.com/wp-content/uploads/2023/03/gre5.webp',
+  ];
+
+  const clientes = [
+    'https://www.ekiipago.com/wp-content/uploads/2023/04/logo-bancaribe.webp',
+    'https://www.ekiipago.com/wp-content/uploads/2023/04/logo-banplus.webp',
+    'https://www.ekiipago.com/wp-content/uploads/2023/03/fonfo-comun.webp',
+    'https://www.ekiipago.com/wp-content/uploads/2023/03/banco-caroni.webp',
+    'https://www.ekiipago.com/wp-content/uploads/2023/03/bancrecer.webp',
+  ];
+
+  return (
+    <div className="et_pb_section et_pb_section_6 et_section_regular">
+      <div className="et_pb_row et_pb_row_8">
+        <div className="et_pb_column et_pb_column_4_4 et_pb_column_18 et_pb_css_mix_blend_mode_passthrough et-last-child">
+          <div className="et_pb_module et_pb_text et_pb_text_14 et_pb_text_align_left et_pb_bg_layout_light">
+            <div className="et_pb_text_inner">
+              <h2>Aliados y clientes ekiipago</h2>
+              <p>Las empresas de telecomunicación y los bancos más importantes de Venezuela forman parte de nuestros clientes y aliados. ¿Qué esperas para integrar ya nuestros servicios de pagos y cobros online en tu plataforma?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="et_pb_row et_pb_row_9">
+        <div className="et_pb_column et_pb_column_4_4 et_pb_column_19 et_pb_css_mix_blend_mode_passthrough et-last-child">
+          <div className="et_pb_module et_pb_text et_pb_text_15 et_pb_text_align_center et_pb_bg_layout_light">
+            <div className="et_pb_text_inner">
+              <h4>Aliados ekiipago</h4>
+            </div>
+          </div>
+          <div className="et_pb_module et_pb_gallery_0 et_pb_gallery_grid">
+            <div className="et_pb_gallery_items et_post_gallery">
+              {aliados.map((aliado, index) => (
+                <div key={index} className="et_pb_gallery_item">
+                  <div className="et_pb_gallery_image landscape">
+                    <img src={aliado} alt="aliado" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="et_pb_row et_pb_row_10">
+        <div className="et_pb_column et_pb_column_4_4 et_pb_column_20 et_pb_css_mix_blend_mode_passthrough et-last-child">
+          <div className="et_pb_module et_pb_text et_pb_text_16 et_pb_text_align_center et_pb_bg_layout_light">
+            <div className="et_pb_text_inner">
+              <h4>Clientes ekiipago</h4>
+            </div>
+          </div>
+          <div className="et_pb_module et_pb_gallery_1 et_pb_gallery_grid">
+            <div className="et_pb_gallery_items et_post_gallery">
+              {clientes.map((cliente, index) => (
+                <div key={index} className="et_pb_gallery_item">
+                  <div className="et_pb_gallery_image landscape">
+                    <img src={cliente} alt="cliente" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
 const Footer: React.FC = () => {
   return (
     <footer className="et-l et-l--footer">
@@ -282,28 +498,68 @@ const Footer: React.FC = () => {
 
 const Home: React.FC = () => {
   return (
-    <div className="Home" data-rsssl="1">
-      <div id="page-container">
-        <div id="et-boc" className="et-boc">
-          <Header />
-          <div id="et-main-area">
-            <div id="main-content">
-              <article id="post-182" className="post-182 page type-page status-publish hentry">
-                <div className="entry-content">
-                  <div className="et-l et-l--post">
-                    <div className="et_builder_inner_content et_pb_gutters3">
-                      <HeroSlider />
-                      <ProductsSection />
+    <>
+      <Helmet>
+        <title>EKIIPAGO - Soluciones de Pagos Digitales en Venezuela</title>
+        <meta name="description" content="Ekiipago ofrece soluciones de pagos digitales para tu negocio en Venezuela. Integra botón de pago, link de pago y más. ¡Aumenta tus ventas online de forma segura y fácil!" />
+        <meta name="keywords" content="pagos digitales, Venezuela, botón de pago, link de pago, pasarela de pago, ecommerce, ventas en línea" />
+        <link rel="canonical" href="https://www.ekiipago.com/" />
+        <meta property="og:title" content="EKIIPAGO - Soluciones de Pagos Digitales en Venezuela" />
+        <meta property="og:description" content="Ekiipago ofrece soluciones de pagos digitales para tu negocio en Venezuela. Integra botón de pago, link de pago y más. ¡Aumenta tus ventas online de forma segura y fácil!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ekiipago.com/" />
+        <meta property="og:image" content="https://www.ekiipago.com/wp-content/uploads/2023/03/ekiioago-blanco-amarillo.svg" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "EKIIPAGO",
+              "url": "https://www.ekiipago.com/",
+              "logo": "https://www.ekiipago.com/wp-content/uploads/2023/03/ekiioago-blanco-amarillo.svg",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+58-412-6174329",
+                "contactType": "Customer Service",
+                "email": "contacto@ekiipago.com"
+              },
+              "sameAs": [
+                "https://twitter.com/ekiipago",
+                "https://www.instagram.com/ekiipago/",
+                "https://www.linkedin.com/showcase/ekiipago/",
+                "https://www.youtube.com/@ekiipago7179"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
+      <div className="Home" data-rsssl="1">
+        <div id="page-container">
+          <div id="et-boc" className="et-boc">
+            <Header />
+            <div id="et-main-area">
+              <div id="main-content">
+                <article id="post-182" className="post-182 page type-page status-publish hentry">
+                  <div className="entry-content">
+                    <div className="et-l et-l--post">
+                      <div className="et_builder_inner_content et_pb_gutters3">
+                        <HeroSlider />
+                        <ProductsSection />
+                        <BeneficiosSection />
+                        <CasosExitoSection />
+                        <BlogSection />
+                        <AliadosClientesSection />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </div>
             </div>
+            <Footer />
           </div>
-          <Footer />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

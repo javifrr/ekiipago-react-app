@@ -1,0 +1,177 @@
+.page-container {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+#main-header {
+    background-color: #7234e9;
+    padding: 10px 0;
+    color: white;
+}
+
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#logo {
+    max-height: 40px;
+}
+
+#top-menu-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+#top-menu-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#top-menu-nav .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    list-style: none;
+}
+
+#top-menu-nav .menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+
+#top-menu-nav .sub-menu a {
+    color: #333;
+}
+
+.de-menu-cta a {
+    background-color: #ffeb3b;
+    color: #7234e9 !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.et_pb_section {
+    padding: 50px 0;
+}
+
+.et_pb_row {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.et_pb_column {
+    flex: 1;
+}
+
+.et_pb_column_1_2 {
+    flex-basis: calc(50% - 15px);
+}
+
+.et_pb_column_4_4 {
+    flex-basis: 100%;
+}
+
+.et_pb_text h1 {
+    color: #7234e9;
+    font-size: 3em;
+}
+
+.et_pb_text h2 {
+    color: #7234e9;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.et_pb_text h3 {
+    color: #7234e9;
+    font-size: 1.5em;
+}
+
+.et_pb_image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.et_pb_section_0 {
+    background-color: #f7f7f7;
+}
+
+.et_pb_section_2 {
+    background-color: #f7f7f7;
+}
+
+.et_pb_button {
+    background-color: #ffeb3b;
+    color: #7234e9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.requirements {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.requirements div {
+    flex: 1;
+}
+
+.requirements img {
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.bancos-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.bancos-logos img {
+    height: 50px;
+    filter: grayscale(100%);
+}
+
+.et-l--footer {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 40px 0;
+}
+
+.et-l--footer .et_pb_row_0_tb_footer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.et-l--footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.et-l--footer .et_pb_text_1_tb_footer p,
+.et-l--footer .et_pb_text_3_tb_footer p {
+    font-weight: bold;
+    color: #ffeb3b;
+}

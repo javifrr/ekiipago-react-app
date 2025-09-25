@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const QuienesSomos: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -105,7 +106,7 @@ const QuienesSomos: React.FC = () => {
                     <a href="#">Productos</a>
                     <ul className="sub-menu">
                       <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-317">
-                        <a href="https://ekiipago.com/boton-de-pago-ekiipago/">Botón de pago</a>
+                        <Link to="/boton-de-pago">Botón de pago</Link>
                       </li>
                       <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1248">
                         <a href="https://ekiipago.com/link-de-pago-movil/">Link de Pago Móvil</a>
@@ -122,7 +123,7 @@ const QuienesSomos: React.FC = () => {
                     <a href="https://ekiipago.com/quienes-somos/" aria-current="page">Quiénes somos</a>
                   </li>
                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-318">
-                    <a href="https://ekiipago.com/blog-ekiipago/">Blog</a>
+                    <Link to="/blog">Blog</Link>
                   </li>
                   <li className="de-menu-cta menu-item menu-item-type-post_type menu-item-object-page menu-item-117">
                     <a href="https://ekiipago.com/contacto/">Contactar</a>
